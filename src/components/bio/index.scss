@@ -16,6 +16,10 @@
 
   .author-name-prefix {
     font-size: 90%;
+    font-weight: 700;
+    font-family: Catamaran;
+    color: #a9a9a9;
+
     margin-right: 4px;
   }
 
@@ -27,6 +31,10 @@
     border-radius: 8px;
     transform-origin: center;
     animation: flutter 2s infinite linear;
+
+    .author-name-content-color {
+      color: rgb(51, 92, 145)
+    }
   }
 
   .author-introduction {
@@ -53,18 +61,23 @@
   0% {
     transform: rotate(0deg);
   }
+
   35% {
     transform: rotate(0deg);
   }
+
   40% {
     transform: rotate(-5deg);
   }
+
   60% {
     transform: rotate(5deg);
   }
+
   65% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(0deg);
   }
@@ -74,18 +87,23 @@
   0% {
     transform: rotate(0deg);
   }
+
   35% {
     transform: rotate(0deg);
   }
+
   40% {
     transform: rotate(-5deg);
   }
+
   60% {
     transform: rotate(5deg);
   }
+
   65% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(0deg);
   }

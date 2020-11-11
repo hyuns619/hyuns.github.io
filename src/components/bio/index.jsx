@@ -23,9 +23,9 @@ export const Bio = () => (
                 }}
               />
               <div className="author-name">
-                <span className="author-name-prefix">Written by</span>
+                <span className="author-name-prefix">Hello, I'm</span>
                 <Link to={'/about'} className="author-name-content">
-                  <span>@{author}</span>
+                  <span className="author-name-content-color">@{author}</span>
                 </Link>
                 <div className="author-introduction">{introduction}</div>
                 <p className="author-socials">
