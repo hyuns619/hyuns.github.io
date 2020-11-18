@@ -1,8 +1,8 @@
 module.exports = {
-  title: `Sounghun Jeon`,
+  title: `Sounghyun Jeon`,
   description: `Blog posted about ...`,
-  author: `hyuns619`,
-  introduction: `Connecting the dots. 내가 남기는 기록은 점이 되고, 그 점이 모여 선과 면으로 확장될 수 있다고 생각합니다.`,
+  author: `hyuns`,
+  introduction: `개발을 진심으로 즐길 수 있는 개발자가 되기를 희망합니다. 블로그에서는 공부하는 일련의 과정을 기록하고 있습니다.`,
   siteUrl: `https://hyuns.netlify.app/`, // Your blog site url
   social: {
     twitter: ``, // Your Twitter account
