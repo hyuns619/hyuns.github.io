@@ -93,19 +93,11 @@ value={
 
 #### <center> [ 로그인 페이지 입력란 ]</center>
 
-<center>
-
-![form](/media/form2.png)
-
-</center>
+![form](/images/login.png)
 
 - 로그인과 회원가입 페이지의 레이아웃 구성이 반복되었기 때문에 하나의 Input을 컴포넌트화하여 재사용이 가능하도록 했다.
 
-<center>
-
-![form](/media/form.png)
-
-</center>
+![form](/images/join.png)
 
 - 위와 같이 이메일과 휴대폰 Input의 경우, 휴대폰 Input에는 컴포넌트를 재사용할 수 있었지만 이메일의 Address란은 HTML Select 태그를 사용해야 했기 때문에 미리 생성한 Input 컴포넌트를 사용하기에 제한 사항이 있었다.
 
