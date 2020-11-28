@@ -34,7 +34,7 @@ export const Bio = () => (
                       href={`https://github.com/${social.github}`}
                       style={{ color: '#335c91' }}
                     >
-                      🙂 GitHub
+                      GitHub
                     </a>
                   )}
                   {social.medium && (
@@ -55,7 +55,7 @@ export const Bio = () => (
                       href={`https://www.instagram.com/${social.instagram}/`}
                       style={{ color: '#335c91' }}
                     >
-                      🙂 Instagram
+                      Instagram
                     </a>
                   )}
                 </p>
