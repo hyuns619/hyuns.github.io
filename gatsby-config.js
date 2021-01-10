@@ -68,9 +68,9 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: `gatsby-plugin-gtag`,
       options: {
-        trackingId: 'G-M4KZ6DB1Y5',
+        trackingId: metaConfig.ga,
         head: true,
         anonymize: true,
       },
