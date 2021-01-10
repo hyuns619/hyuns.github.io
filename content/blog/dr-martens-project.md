@@ -1,5 +1,5 @@
 ---
-title: 'Dr.Martens 웹 사이트 클로닝 팀 프로젝트 회고'
+title: '닥터마틴(Dr.Martens) 웹사이트 클론 프로젝트 회고'
 date: 2020-07-02 16:21:13
 category: 'project'
 draft: false
