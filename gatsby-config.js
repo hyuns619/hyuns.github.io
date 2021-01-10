@@ -92,12 +92,13 @@ module.exports = {
       options: {
         pathToConfigModule: `src/utils/typography`,
       },
+    },
       {
         resolve: 'gatsby-plugin-robots-txt',
         options: {
           host: 'https://hyuns.netlify.app',
           sitemap: 'https://hyuns.netlify.app/sitemap.xml',
-          policy: [{userAgent: '*', allow: '/'}]
+          policy: [{userAgent: '*', allow: '/'}],
         },
     },
     `gatsby-transformer-sharp`,
