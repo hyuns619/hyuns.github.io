@@ -93,14 +93,6 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
-      {
-        resolve: 'gatsby-plugin-robots-txt',
-        options: {
-          host: 'https://hyuns.netlify.app',
-          sitemap: 'https://hyuns.netlify.app/sitemap.xml',
-          policy: [{userAgent: '*', allow: '/'}],
-        },
-    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-feed`,
@@ -109,5 +101,13 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-lodash`,
     `gatsby-plugin-sitemap`,
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: metaConfig.siteUrl,
+        sitemap: metaConfig.sitemapPath,
+        policy: metaConfig.robotsPolicy,
+      },
+  },
   ],
 }
