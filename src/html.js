@@ -9,6 +9,10 @@ export default class HTML extends React.Component {
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
           <meta
+            name="Sounghyun Jeon  | 개발 블로그"
+            content="안녕하세요, 전성현입니다. 블로그에서는 공부하는 일련의 과정을 기록하고 있습니다. 4dallove@gmail.com "
+          />
+          <meta
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1, maximum-scale=1, user-scalable=0, viewport-fit=cover"
           />
