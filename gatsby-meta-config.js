@@ -1,7 +1,7 @@
 module.exports = {
   title: `Sounghyun Jeon`,
-  description: `Blog posted about ...`,
-  author: `hyuns`,
+  description: `Sounghyun Jeon의 블로그입니다. 프론트엔드 개발과 관련된 일련의 경험과 배운 것을 블로그에 기록합니다.`,
+  author: `hyuns619`,
   introduction: `개발을 진심으로 즐길 수 있는 개발자가 되기를 희망합니다. 블로그에서는 공부하는 일련의 과정을 기록하고 있습니다.`,
   siteUrl: `https://hyuns.netlify.app/`, // Your blog site url
   social: {
@@ -12,7 +12,17 @@ module.exports = {
     instagram: `hyuns619`, // Your LinkedIn account
   },
   icon: `content/assets/favicon.png`, // Add your favicon
-  keywords: [`blog`],
+  keywords: [
+    `blog`,
+    `devlog`,
+    `web`,
+    `development`,
+    `frontend`,
+    `javascript`,
+    `books`,
+    `review`,
+    `til`
+  ],
   comment: {
     disqusShortName: '', // Your disqus-short-name. check disqus.com.
     utterances: 'hyuns619/hyuns.netlify.app', // Your repository for archive comment
@@ -21,7 +31,7 @@ module.exports = {
     countOfInitialPost: 10, // Config your initial count of post
   },
   sponsor: {
-    buyMeACoffeeId: 'jbee',
+    buyMeACoffeeId: '',
   },
   share: {
     facebookAppId: '', // Add facebookAppId for using facebook share feature v3.2
