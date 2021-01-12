@@ -9,9 +9,11 @@ export const ThumbnailItem = ({ node }) => (
     <div key={node.fields.slug}>
       <h3>{node.frontmatter.title || node.fields.slug}</h3>
       <p>
-        <time className="thumbnail-date">
-          <span style={{ fontSize: '16px', fontWeight: 'bold' }}>
-            {node.frontmatter.category} |{' '}
+        <time className="">
+          <span
+            style={{ fontSize: '16px', color: '#335C91', fontWeight: '500' }}
+          >
+            {node.frontmatter.category}&nbsp;&nbsp;
           </span>
           {node.frontmatter.date}
         </time>
