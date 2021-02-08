@@ -29,11 +29,11 @@ draft: false
 
 ### 런타임 (엔진 외부적인 요소)
 
-- Wep APIs (DOM, AJAX, Timeout)
+- Web APIS (DOM, AJAX, Timeout)
 - Callback Queue
 - Event Loop
 
-외부적인 요소에는 브라우저에서 제공되는 Wep APIs가 있으며 이벤트 루프와 콜백 큐가 있다.
+외부적인 요소에는 브라우저에서 제공되는 Web APIS가 있으며 이벤트 루프와 콜백 큐가 있다.
 
 ### 비동기 처리의 좋은 예
 
