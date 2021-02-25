@@ -41,7 +41,12 @@ export const Bio = () => (
                     <a href={`https://medium.com/${social.medium}`}>Medium</a>
                   )}
                   {social.til && (
-                    <a href={`https://github.com/${social.til}`}>TIL</a>
+                    <a
+                      href={`https://github.com/${social.til}`}
+                      style={{ color: '#335c91' }}
+                    >
+                      TIL
+                    </a>
                   )}
                   {social.facebook && (
                     <a href={`https://www.facebook.com/${social.facebook}`}>
