@@ -4,11 +4,11 @@ module.exports = {
   의 블로그입니다. 프론트엔드 개발과 관련된 일련의 경험과 배운 것을 블로그에 기록합니다.`,
   author: `hyun`,
   introduction: `개발을 진심으로 즐길 수 있는 개발자가 되기를 희망합니다. 블로그에서는 공부하는 일련의 과정을 기록하고 있습니다.`,
-  siteUrl: `https://hyuns.netlify.app/`, // Your blog 
+  siteUrl: `https://hyuns.netlify.app/`, // Your blog
   sitemapPath: `https://hyuns.netlify.app/sitemap.xml`,
   robotsPolicy: [{ userAgent: '*', allow: '/' }],
   social: {
-    twitter: ``, // Your Twitter account
+    til: `sunghyunjeonme/TIL`, // Your Twitter account
     github: `sunghyunjeonme`, // Your GitHub account
     medium: ``, // Your Medium account
     facebook: ``, // Your Facebook account
@@ -24,7 +24,7 @@ module.exports = {
     `javascript`,
     `books`,
     `review`,
-    `til`
+    `til`,
   ],
   comment: {
     disqusShortName: '', // Your disqus-short-name. check disqus.com.
