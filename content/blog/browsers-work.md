@@ -191,3 +191,4 @@ DOM과 CSSOM은 결합하여 렌더링 트리를 생성한다. 렌더 트리는 
 
 - [Understanding the Critical Rendering Path](https://bitsofco.de/understanding-the-critical-rendering-path/)
 - [Critical rendering path / MDN](https://developer.mozilla.org/en-US/docs/Web/Performance/Critical_rendering_path)
+- [poiemaweb.com](https://poiemaweb.com/)
