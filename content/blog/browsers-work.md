@@ -7,12 +7,6 @@ draft: false
 
 ![Photo by Daniel Cheung on Unsplash](../blog/images/lego-thebeatles.jpg)
 
-<center>
-
-<small>Photo by [Daniel Cheung](https://unsplash.com/@danielkcheung) on [Unsplash](https://unsplash.com/)</small>
-
-</center>
-
 <h2>들어가며</h2>
 
 대부분의 프로그래밍 언어는 운영체제(Operating System, OS) 위에서 실행되지만 웹 애플리케이션의 자바스크립트는 브라우저에서 HTML, CSS와 함께 실행된다. 브라우저 환경을 고려하며 브라우저가 어떻게 동작하는지 이해하는 것은 효율적인 자바스크립트 프로그래밍의 밑거름이 될 것이다. 해당 포스트는 전반적인 브라우저의 동작 원리를 이해하는 것을 목적으로 작성되었다.

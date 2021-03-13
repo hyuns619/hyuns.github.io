@@ -8,11 +8,9 @@ lang: 'en'
 
 <div align="center">
 
-_Always thanks for learning. My goal is to become a **software artisan who shares warm energy.**_
+<img src="https://user-images.githubusercontent.com/62008651/111026073-b3cdc800-842b-11eb-8a7b-0680e1986b3c.jpeg" alt="profile" style="width:300px; border-radius:50%;" loading="eager">
 
-<img src="./../assets/favicon.png" alt="HYUN">
-
-**I Wanna be Frontend SW Engineer**
+**Always thanks for learning**
 
 </div>
 
