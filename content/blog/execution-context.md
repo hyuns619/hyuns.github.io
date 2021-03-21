@@ -102,7 +102,7 @@ Variable Environment는 초기 상태를 유지하는 반면, Lexical Environmen
 
 ### 무야~호이스팅!
 
-자바스크립트 엔진이 environmentRecord에 식별자를 수집하면서 이미 식별자 정보를 알고 있으니, 우리는 변수 선언부(식별자)를 코드 최상단으로 끌어올린다고 생각하자! 앞으로 호이스팅이라고 부르기로 약속한 거야!
+자바스크립트 엔진이 environmentRecord에 식별자를 수집하면서 이미 식별자 정보를 알고 있으니, 우리는 변수 선언부(식별자)를 코드 최상단으로 끌어올린다고 생각하자! 이렇게 약속한 게 호이스팅이라는 개념이야.
 
 아래는 호이스팅 전의 모습이야.
 
@@ -139,9 +139,9 @@ function a() {
 
 스코프(scope)란 식별자에 대한 유효범위야. 이러한 식별자의 유효 범위를 안에서부터 바깥으로 차례대로 검색해 나가는 것을 스코프 체인(scope chain)이라고 해.
 
-그리고 이 모든 것을 가능케 하는 게 Lexical Environment의 두 번째 수집 자료인 outerEnvironmentReference야.
+그리고 이 모든 것을 가능케 하는 게 Lexical Environment의 두 번째 수집 자료인 `outerEnvironmentReference`야.
 
-outerEnvironmentReference는 가장 직전 컨텍스트의 Lexical Environment를 참조하는데 이를 통해서 직전 컨텍스트의 식별자에 접근할 수 있게 되는 거야.
+outerEnvironmentReference는 가장 직전 컨텍스트의 `Lexical Environment`를 참조하는데 이를 통해서 직전 컨텍스트의 식별자에 접근할 수 있게 되는 거야.
 
 가장 첫 번째 예시로 돌아가서 전체적인 흐름을 살펴보자.
 
@@ -167,7 +167,7 @@ console.log(a) // 1
 
 - 먼저 코드 전역에 걸쳐서 전역 실행 컨텍스트가 생성되고 콜 스택에 쌓여. 전역 컨텍스트의 enviornmentRecord에는 `var a;`와 `outer` 함수의 선언부, 즉 outer 함수 전체가 담기게 되겠지.
 
-- 컨텍스트 내에 정보 수집을 끝내면 윗줄부터 순서대로 코드가 실행 돼. 그래서 변수 a에는 1이라는 값이 할당되지.
+- 컨텍스트 내에 정보 수집을 끝내면 윗줄부터 순서대로 코드가 실행돼. 그래서 변수 a에는 1이라는 값이 할당되지.
 - outer 함수가 실행되면서 outer 컨텍스트가 생성되고 콜 스택에 쌓여. outer 컨텍스트가 생성되면서 outer 컨텍스트의 environmentRecord에 `inner` 함수의 선언부가 담기게 되고 이어서 `console.log(a)`가 실행되는데 outer 컨텍스트에는 식별자 `a`에 대한 정보가 없지?
 
 - 이때 outer 컨텍스트의 outerEnvironmentReference를 통해서 상위 컨텍스트 즉, 전역 컨텍스의 Lexical Environment에 접근할 수 있게 되고 environment에 저장되어 있는 식별자 `a`를 참조할 수 있어.
@@ -176,9 +176,9 @@ console.log(a) // 1
 
 - inner 함수가 실행되면서 inner 컨텍스트가 생성되었고 environmentRecord에 식별자 `var a;`를 수집해.
 
-- 이어서 `console.log(a)` 코드를 실행하는데 inner 컨텍스트 environmentRecord에 수집된 식별자 정보는 있지만 값이 할당되기 전의 상태지. 이런 경우에 `undefined`이 반환 돼. environmentRecord에 수집된 식별자 정보가 없을 경우에만 outerEnvironmentReference를 통해서 상위 컨텍스트에 접근해서 참조하는 거야.
+- 이어서 `console.log(a)` 코드를 실행하는데 inner 컨텍스트 environmentRecord에 수집된 식별자 정보는 있지만, 값이 할당되기 전의 상태지. 이런 경우에 `undefined`이 반환 돼. environmentRecord에 수집된 식별자 정보가 없을 때만 outerEnvironmentReference를 통해서 상위 컨텍스트에 접근해서 참조하는 거야.
 
-- 다시 inner 함수 내의 코드가 진행되면서 변수 a에 3이 할당되고 inner 컨텍스트는 콜 스택에서 제거 돼.
+- 다시 inner 함수 내의 코드가 진행되면서 변수 a에 3이 할당되고 inner 컨텍스트는 콜 스택에서 제거돼.
 - `inner()` 아래의 `console.log(a)`가 실행되는데 outer 컨텍스트 environmentRecord에 식별자 `a`가 없기 때문에 outerEnvironmentReference를 통해서 전역 컨텍스트의 Lexical Environment에 접근하고 environmentRecord에 있는 `1`을 출력하게 되는 거야.
 - outer 함수가 할 일을 끝냈으니, 콜 스택에서 제거되고 마지막 남은 `conosole.log(a)`를 실행하는데 이는 전역 컨텍스트의 environmentRecord에 바로 저장되어 있지? 그래서 1이 출력되는 거야.
 - 마지막으로 코드가 모두 종료되었으니 전역 컨텍스트도 콜 스택에서 제거 돼.
@@ -189,14 +189,18 @@ console.log(a) // 1
 
 - 실행 컨텍스트(Execution Context)
 
-  - VariableEnvironment
-  - LexicalEnvironment
+  - Variable Environment
+  - Lexical Environment
     - - environmentRecord : 식별자 수집 (hoisting)
-      - outerEnvironmentReference : 직전 컨텍스트의 LexicalEnvironment를 참조 (scope chain)
+        - 호이스팅 과정에서 함수 선언문과 함수 표현식에 대한 차이가 발생하는데, 함수 선언문의 경우는 함수 전체가 호이스팅 되기 때문에 함수 표현식을 사용하는 것을 추천!
+      - outerEnvironmentReference : 직전 컨텍스트의 Lexical Environment를 참조 (scope chain)
   - ThisBinding
     - - this로 지정된 객체가 저장
 
 - 전역 변수 : 전역 컨텍스트의 LexicalEnvironment에 담긴 변수
+
+  - 안전한 코드 구성을 위해 가급적 전역변수의 사용은 최소화해야 해.
+
 - 지역 변수 : 그 밖의 함수에 의해 생성된 실행 컨텍스트의 변수
 
-안전한 코드 구성을 위해 가급적 전역변수의 사용은 최소화해야 함.
+> PS. D & Y가 이 포스트를 읽고 실행 컨텍스트란 무엇인지 알 수 있기를 바라면서 둘을 특정했던(?) 포스팅을 마친다. 그냥 알고 있는 것과 타인이 이해할 수 있도록 작성하는 것은 너무나도 큰 차이인 것 같다. 이 사이의 간극을 조금이나마 줄일 수 있도록 계속 쉽게 쓰는 연습을 해야겠다.
