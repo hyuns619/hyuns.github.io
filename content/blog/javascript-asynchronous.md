@@ -1,5 +1,5 @@
 ---
-title: '자바스크립트의 비동기적 처리'
+title: '자바스크립트 비동기적 처리'
 date: 2021-01-27 02:05:13
 category: 'javascript'
 draft: false
