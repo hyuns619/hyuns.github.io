@@ -168,7 +168,7 @@ console.log(a) // 1
 - 먼저 코드 전역에 걸쳐서 전역 실행 컨텍스트가 생성되고 콜 스택에 쌓여. 전역 컨텍스트의 enviornmentRecord에는 `var a;`와 `outer` 함수의 선언부, 즉 outer 함수 전체가 담기게 되겠지.
 
 - 컨텍스트 내에 정보 수집을 끝내면 윗줄부터 순서대로 코드가 실행돼. 그래서 변수 a에는 1이라는 값이 할당되지.
-- outer 함수가 실행되면서 outer 컨텍스트가 생성되고 콜 스택에 쌓여. outer 컨텍스트가 생성되면서 outer 컨텍스트의 environmentRecord에 `inner` 함수의 선언부가 담기게 되고 이어서 `console.log(a)`가 실행되는데 outer 컨텍스트에는 식별자 `a`에 대한 정보가 없지?
+- 이후에 outer 함수가 실행되면서 outer 컨텍스트가 생성되고 콜 스택에 쌓여. outer 컨텍스트가 생성되면서 outer 컨텍스트의 environmentRecord에 `inner` 함수의 선언부가 담기게 되고 이어서 `console.log(a)`가 실행되는데 outer 컨텍스트에는 식별자 `a`에 대한 정보가 없지?
 
 - 이때 outer 컨텍스트의 outerEnvironmentReference를 통해서 상위 컨텍스트 즉, 전역 컨텍스의 Lexical Environment에 접근할 수 있게 되고 environment에 저장되어 있는 식별자 `a`를 참조할 수 있어.
 
